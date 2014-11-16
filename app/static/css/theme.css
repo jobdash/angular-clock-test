@@ -1,0 +1,25 @@
+md-content {
+    margin-right: 7px;
+}
+
+section {
+    background: #f7f7f7;
+    border-radius: 3px;
+    text-align: center;
+    margin: 1em;
+    position: relative !important;
+    padding-bottom: 10px;
+}
+
+section md-button {
+    /*margin: 1em;*/
+    height: 35px;
+}
+
+section .md-button-inner {
+    display: inline-block;
+    /*margin: 1em;*/
+    height: 25px;
+    width: 10em;
+    line-height: 25px;
+}

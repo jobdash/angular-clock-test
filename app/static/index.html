@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="/static/lib/angular-material/angular-material.css">
+        <link rel="stylesheet" href="/static/lib/angular-material/themes/default-theme.css">
+        <link rel="stylesheet" href="/static/lib/angular-material/themes/green-theme.css">
+        <link rel="stylesheet" href="/static/css/theme.css">
+
+        <script type="text/javascript" src="/static/lib/underscore/underscore.js"> </script>
+        <script type="text/javascript" src="/static/lib/momentjs/moment.js"> </script>
+
+        <script type="text/javascript" src="/static/lib/angular/angular.js"> </script>
+        <script src="/static/lib/angular-aria/angular-aria.js"></script>
+        <script src="/static/lib/angular-animate/angular-animate.js"></script>
+        <script src="/static/lib/hammerjs/hammer.js"></script>
+        <script src="/static/lib/angular-material/angular-material.js"></script>
+
+        <script src="/static/js/app.js"></script>
+    </head>
+
+    <body ng-app="JobDashClock" layout="vertical">
+
+        <div ng-controller="TimeCtrl as clock">
+        <md-content md-theme="default" >
+            <section layout="horizontal" layout-align="center center">
+                <h3>{{ clock.time | clockDisplay }}</h3>
+            </section>
+
+            <section layout="horizontal" layout-sm="horizontal" layout-align="center">
+                <span datetime-picker ng-model="clock.newAlarm"></span>
+                <md-button
+                    class="md-primary"
+                    ng-click="clock.addAlarm()"
+                    aria-label="Add alarm">Add alarm</md-button>
+            </section>
+
+            <section layout="vertical" layout-sm="horizontal" layout-align="center" ng-if="clock.alarms.length > 0">
+                <md-list>
+                    <md-item ng-repeat="alarm in clock.alarms track by $index">
+                        <md-item-content>
+                            <h4>Alarm at {{ alarm | clockDisplay }}</h4>
+                            <md-button
+                                class="md-warn"
+                                ng-click="clock.removeAlarm($index)"
+                                aria-label="Remove alarm">Remove</md-button>
+                        </md-item-content>
+                    </md-item>
+                </md-list>
+            </section>
+        </md-content>
+        </div>
+    </body>
+
+</html>
