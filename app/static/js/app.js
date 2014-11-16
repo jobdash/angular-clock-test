@@ -56,6 +56,16 @@ angular.module('JobDashClock', ['ngMaterial'])
     }
 })
 
+.filter('objectAnd', function() {
+    /*
+        Return the AND of all object values
+    */
+    return function(inputObj) {
+        return _.reduce(inputObj,
+                function(memo, value){ return memo && value}, true)
+    }
+})
+
 .directive('datetimePicker', function () {
     /**
     *   Create a date and a time picker element but then combine them into
