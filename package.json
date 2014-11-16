@@ -1,0 +1,11 @@
+{
+  "name": "angular-clock",
+  "version": "0.0.0",
+  "description": "JobDash Angular Test App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lucas Roesler",
+  "license": "ISC"
+}
