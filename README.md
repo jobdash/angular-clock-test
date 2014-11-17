@@ -58,3 +58,14 @@ report in your terminal.  The current configuration will automatically watch for
  any changes to the javascript files and re-run the tests if the files change.
 If you want to use a different browser, you will need to edit the
 `karma.conf.js`
+
+
+Resources
+=========
+
+The following pages are useful introduction to testing in AngularJS.
+
+- [Angular tips](http://angular-tips.com/blog/categories/unit-test/)
+- [Angular Recipes](http://fdietz.github.io/recipes-with-angular-js/directives/testing-directives.html)
+- [ng-newsletter](http://www.ng-newsletter.com/advent2013/#!/day/19)
+- [Core Angular Docs](https://docs.angularjs.org/guide/unit-testing)
