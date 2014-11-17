@@ -1,5 +1,5 @@
-Angular Clock Test
-==================
+Angular Clock Homework
+======================
 
 This is a simple (and still incomplete) Angular alarm clock application.
 
@@ -28,8 +28,8 @@ python app/app.py
 You can then view the application at `http://localhost:5000`.
 
 
-Test
-====
+Homework
+========
 
 The goal of this test is to see you unit test some angular code.  The application
 is relatively simple.  It contains one controller, one filter, and one directive.
@@ -58,6 +58,17 @@ report in your terminal.  The current configuration will automatically watch for
  any changes to the javascript files and re-run the tests if the files change.
 If you want to use a different browser, you will need to edit the
 `karma.conf.js`
+
+###Suggestions
+
+Here are some things to consider when writing the test:
+* Did the directive render correctly?
+* Does updating the form input correctly update the model?  ( Read the
+directive and its controller very carefully, there is some non-trivial
+behavior there.)
+* Would it be easier to test the directive if it was written in a different way?
+    * If so, how would you re-write it?
+* What test cases/situations should you cover?
 
 
 Resources
