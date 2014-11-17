@@ -38,7 +38,7 @@
                 <md-list>
                     <md-item ng-repeat="alarm in clock.alarms track by $index">
                         <md-item-content>
-                            <h4>Alarm at {{ alarm | clockDisplay }}</h4>
+                            <h4>Alarm at {{ alarm.value | clockDisplay }}</h4>
                             <md-button
                                 class="md-warn"
                                 ng-click="clock.removeAlarm($index)"

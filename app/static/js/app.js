@@ -26,12 +26,31 @@ angular.module('JobDashClock', ['ngMaterial'])
         self.newAlarm = new Date();
 
         self.addAlarm = function () {
-            self.alarms.push(self.newAlarm);
+            var alarm = moment(self.newAlarm);
+            var alertTimer;
+
+            if (moment().isBefore(alarm)) {
+                alertTimer = $timeout(
+                    function() {
+                        alert('Alarm!')
+                    },
+                    alarm.diff(moment()) // ms between the alarm time and now
+                )
+            }
+
+            console.log(alertTimer);
+
+            self.alarms.push({
+                value: self.newAlarm,
+                alertTimer: alertTimer
+            });
             self.newAlarm = new Date();
+
         }
 
         self.removeAlarm = function (idx) {
-            self.alarms.splice(idx, 1);
+            var alarm = self.alarms.splice(idx, 1);
+            $timeout.cancel(alarm[0].alertTimer);
         }
 
     }
