@@ -63,7 +63,7 @@ If you want to use a different browser, you will need to edit the
 Resources
 =========
 
-The following pages are useful introduction to testing in AngularJS.
+The following pages are useful introductions to testing in AngularJS.
 
 - [Angular tips](http://angular-tips.com/blog/categories/unit-test/)
 - [Angular Recipes](http://fdietz.github.io/recipes-with-angular-js/directives/testing-directives.html)
