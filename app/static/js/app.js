@@ -10,6 +10,7 @@ angular.module('JobDashClock', ['ngMaterial'])
         *
         */
         var self = this;
+        phones = 3;
         self.time = "Loading ...";
         self.tickInterval = 1000; // ms
 
