@@ -12,7 +12,6 @@ angular.module('JobDashClock', ['ngMaterial'])
         var self = this;
         self.time = "Loading ...";
         self.tickInterval = 1000; // ms
-
         self.tick = function() {
             self.time = moment() // get the current time
             $timeout(self.tick, self.tickInterval); // reset the timer
@@ -24,6 +23,7 @@ angular.module('JobDashClock', ['ngMaterial'])
 
         self.alarms = [];
         self.newAlarm = new Date();
+        self.alarmTest = false;
 
         self.addAlarm = function () {
             var alarm = moment(self.newAlarm);
@@ -32,7 +32,8 @@ angular.module('JobDashClock', ['ngMaterial'])
             if (moment().isBefore(alarm)) {
                 alertTimer = $timeout(
                     function() {
-                        alert('Alarm!')
+                        alert('Alarm!');
+                        self.alarmTest = true;
                     },
                     alarm.diff(moment()) // ms between the alarm time and now
                 )
