@@ -12,7 +12,6 @@ angular.module('JobDashClock', ['ngMaterial'])
         var self = this;
         self.time = "Loading ...";
         self.tickInterval = 1000; // ms
-        // self.phones = 3;
         self.tick = function() {
             self.time = moment() // get the current time
             $timeout(self.tick, self.tickInterval); // reset the timer
